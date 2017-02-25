@@ -7,13 +7,12 @@ public class GameController : MonoBehaviour {
 	public GameObject hazard;
 	public Vector3 spawnValues;
 
-	void start (){
-		SpawnWaver();
+	void start () {
+		SpawnWaver ();
 	}
 
-	void SpawnWaver ()
-	{
-		Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+	void SpawnWaver (){
+		Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x,spawnValues.x), spawnValues.y, spawnValues.z);
 		Quaternion spawnRotation = Quaternion.identity;
 		Instantiate (hazard, spawnPosition, spawnRotation);
 	}
